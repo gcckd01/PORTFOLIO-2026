@@ -2,35 +2,28 @@ import type { AstroExpressiveCodeOptions } from "astro-expressive-code";
 import type { SiteConfig } from "@/types";
 
 export const siteConfig: SiteConfig = {
-	// Used as both a meta property (src/components/BaseHead.astro L:31 + L:49) & the generated satori png (src/pages/og-image/[slug].png.ts)
-	author: "Chris Williams",
-	// Date.prototype.toLocaleDateString() parameters, found in src/utils/date.ts.
+	// Used as both a meta property & the generated satori png
+	author: "Ayush Kedia", //
+	// Date.prototype.toLocaleDateString() parameters
 	date: {
-		locale: "en-GB",
+		locale: "en-IN", // Set for Ayush Kedia
 		options: {
 			day: "numeric",
 			month: "short",
 			year: "numeric",
 		},
 	},
-	// Used as the default description meta property and webmanifest description
-	description: "An opinionated starter theme for Astro",
-	// HTML lang property, found in src/layouts/Base.astro L:18 & astro.config.ts L:48
-	lang: "en-GB",
-	// Meta property, found in src/components/BaseHead.astro L:42
-	ogLocale: "en_GB",
-	/* 
-		- Used to construct the meta title property found in src/components/BaseHead.astro L:11 
-		- The webmanifest name found in astro.config.ts L:42
-		- The link value found in src/components/layout/Header.astro L:35
-		- In the footer found in src/components/layout/Footer.astro L:12
-	*/
-	title: "Astro Cactus",
-	// ! Please remember to replace the following site property with your own domain, used in astro.config.ts
-	url: "https://astro-cactus.chriswilliams.dev/",
+	// Professional bio focusing on your Data/ML career path for Ayush Kedia
+	description: "B.Tech CSE Student @ KIIT | Data Analytics & ML Engineer | SAP Certified", //
+	lang: "en-IN",
+	ogLocale: "en_IN",
+	title: "Ayush Kedia | Portfolio", //
+	// Personalized url for Ayush Kedia
+	url: "https://ayushkedia.in",
 };
 
-// Used to generate links in both the Header & Footer.
+// Simplified to remove social links from the header menu to fix potential syntax errors.
+// They will appear in the footer via SocialList.astro.
 export const menuLinks: { path: string; title: string }[] = [
 	{
 		path: "/",
@@ -42,7 +35,7 @@ export const menuLinks: { path: string; title: string }[] = [
 	},
 	{
 		path: "/posts/",
-		title: "Blog",
+		title: "Projects",
 	},
 	{
 		path: "/notes/",
@@ -65,17 +58,13 @@ export const expressiveCodeOptions: AstroExpressiveCodeOptions = {
 		uiLineHeight: "inherit",
 	},
 	themeCssSelector(theme, { styleVariants }) {
-		// If one dark and one light theme are available
-		// generate theme CSS selectors compatible with cactus-theme dark mode switch
 		if (styleVariants.length >= 2) {
 			const baseTheme = styleVariants[0]?.theme;
 			const altTheme = styleVariants.find((v) => v.theme.type !== baseTheme?.type)?.theme;
 			if (theme === baseTheme || theme === altTheme) return `[data-theme='${theme.type}']`;
 		}
-		// return default selector
 		return `[data-theme="${theme.name}"]`;
 	},
-	// One dark, one light theme => https://expressive-code.com/guides/themes/#available-themes
 	themes: ["dracula", "github-light"],
 	useThemedScrollbars: false,
 };

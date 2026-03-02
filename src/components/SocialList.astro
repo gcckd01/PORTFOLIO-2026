@@ -1,9 +1,8 @@
 ---
 import { Icon } from "astro-icon/components";
 
-/** 
+/**
 	Uses https://www.astroicon.dev/getting-started/
-	Find icons via guide: https://www.astroicon.dev/guides/customization/#open-source-icon-sets
 	Only installed pack is: @iconify-json/mdi
 */
 const socialLinks: {
@@ -11,11 +10,26 @@ const socialLinks: {
 	isWebmention?: boolean;
 	link: string;
 	name: string;
+	download?: boolean;
 }[] = [
 	{
 		friendlyName: "Github",
-		link: "https://github.com/chrismwilliams/astro-cactus",
+		// Github profile for Ayush Kedia
+		link: "https://github.com/gcckd01", // [cite: 9]
 		name: "mdi:github",
+	},
+	{
+		friendlyName: "LinkedIn",
+		// LinkedIn profile for Ayush Kedia
+		link: "https://www.linkedin.com/in/Ayushkedia", // [cite: 9]
+		name: "mdi:linkedin",
+	},
+	{
+		friendlyName: "Download Resume",
+		// Download link for Ayush Kedia's resume
+		link: "/Ayush-Kedia-2026-Resume.pdf", //
+		name: "mdi:file-document-outline",
+		download: true,
 	},
 ];
 ---
@@ -24,13 +38,14 @@ const socialLinks: {
 	<p>Find me on</p>
 	<ul class="flex flex-1 items-center gap-x-2 sm:flex-initial">
 		{
-			socialLinks.map(({ friendlyName, isWebmention, link, name }) => (
+			socialLinks.map(({ friendlyName, isWebmention, link, name, download }) => (
 				<li class="flex">
 					<a
 						class="hover:text-link inline-block"
 						href={link}
 						rel={`noreferrer ${isWebmention ? "me authn" : ""}`}
-						target="_blank"
+						target={download ? "_self" : "_blank"}
+						download={download ? "Ayush_Kedia_Resume.pdf" : undefined}
 					>
 						<Icon aria-hidden="true" class="h-8 w-8" focusable="false" name={name} />
 						<span class="sr-only">{friendlyName}</span>
