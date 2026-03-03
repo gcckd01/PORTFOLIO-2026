@@ -11,7 +11,7 @@ tags: ["Machine Learning", "IoT", "Flask", "React Native", "Supabase"]
 ---
 
 ### Project Overview
-Developed **AgroSync**, a major project designed for precision agriculture.  [cite_start]The system integrates custom ESP32-based hardware sensors with a mobile application to provide real-time soil analysis and data-driven farming insights. [cite: 26, 28]
+Developed **AgroSync**, a major project designed for precision agriculture.The system integrates custom ESP32-based hardware sensors with a mobile application to provide real-time soil analysis and data-driven farming insights.
 
 
 
