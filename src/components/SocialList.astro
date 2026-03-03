@@ -1,8 +1,7 @@
 ---
 import { Icon } from "astro-icon/components";
 
-/**
-	Uses https://www.astroicon.dev/getting-started/
+/** Uses https://www.astroicon.dev/getting-started/
 	Only installed pack is: @iconify-json/mdi
 */
 const socialLinks: {
@@ -14,22 +13,18 @@ const socialLinks: {
 }[] = [
 	{
 		friendlyName: "Github",
-		// Github profile for Ayush Kedia
-		link: "https://github.com/gcckd01", //
+		link: "https://github.com/gcckd01",
 		name: "mdi:github",
 	},
 	{
 		friendlyName: "LinkedIn",
-		// LinkedIn profile for Ayush Kedia
-		link: "https://www.linkedin.com/in/ayush-kedia-92813824a/",//
+		link: "https://www.linkedin.com/in/ayush-kedia-92813824a/",
 		name: "mdi:linkedin",
 	},
 	{
-		friendlyName: "Download Resume",
-		// Download link for Ayush Kedia's resume
-		link: "/resume.pdf", //
+		friendlyName: "Resume",
+		link: "https://drive.google.com/file/d/1VMxD6U1AL6iM3M2VImqYiyb46-qdrYUb/view?usp=sharing",
 		name: "mdi:file-document-outline",
-		download: true,
 	},
 ];
 ---
@@ -38,17 +33,15 @@ const socialLinks: {
 	<p>Find me on</p>
 	<ul class="flex flex-1 items-center gap-x-2 sm:flex-initial">
 		{
-			socialLinks.map(({ friendlyName, isWebmention, link, name, download }) => (
+			socialLinks.map(({ friendlyName, isWebmention, link, name }) => (
 				<li class="flex">
 					<a
-						<a
-           class="inline-block p-1 sm:hover:text-link"
-           href={link}
-           target="_blank"
-           rel="noopener noreferrer"
-           download={download ? "" : undefined}
+						class="inline-block p-1 sm:hover:text-link"
+						href={link}
+						rel={`noopener noreferrer ${isWebmention ? "me authn" : ""}`}
+						target="_blank"
 					>
-						<Icon aria-hidden="true" class="h-8 w-8" focusable="false" name={name} />
+						<Icon aria-hidden="true" class="h-6 w-6" focusable="false" name={name} />
 						<span class="sr-only">{friendlyName}</span>
 					</a>
 				</li>
