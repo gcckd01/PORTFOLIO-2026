@@ -6,7 +6,7 @@ tags: ["Python", "Machine Learning", "FastF1 API", "Scikit-Learn", "Data Enginee
 ---
 
 ## Project Links
-**[ View GitHub Repository](https://github.com/gcckd01/F1_Quali_Predictor)** | **[View Sample Predictions](https://github.com/gcckd01/F1_Quali_Predictor#example-output)**
+**[ View GitHub Repository](https://github.com/gcckd01/F1-QUALI-PREDICTOR)** |
 
 
 ### Project Overview
