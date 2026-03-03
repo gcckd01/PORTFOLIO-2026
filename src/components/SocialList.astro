@@ -27,7 +27,7 @@ const socialLinks: {
 	{
 		friendlyName: "Download Resume",
 		// Download link for Ayush Kedia's resume
-		link: "/Ayush-Kedia-2026-Resume.pdf", //
+		link: "/resume.pdf", //
 		name: "mdi:file-document-outline",
 		download: true,
 	},
@@ -41,11 +41,12 @@ const socialLinks: {
 			socialLinks.map(({ friendlyName, isWebmention, link, name, download }) => (
 				<li class="flex">
 					<a
-						class="hover:text-link inline-block"
-						href={link}
-						rel={`noreferrer ${isWebmention ? "me authn" : ""}`}
-						target={download ? "_self" : "_blank"}
-						download={download ? "Ayush_Kedia_Resume.pdf" : undefined}
+						<a
+           class="inline-block p-1 sm:hover:text-link"
+           href={link}
+           target="_blank"
+           rel="noopener noreferrer"
+           download={download ? "" : undefined}
 					>
 						<Icon aria-hidden="true" class="h-8 w-8" focusable="false" name={name} />
 						<span class="sr-only">{friendlyName}</span>
