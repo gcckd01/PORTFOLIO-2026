@@ -6,7 +6,7 @@ tags: ["Machine Learning", "IoT", "Flask", "React Native", "Supabase"]
 ---
 
 ## Project Links
-**[ View GitHub Repository](https://github.com/gcckd01/AgroSync)** | **[Project brochure](https://drive.google.com/file/d/1q23UIfDBKe1v4r62iZ29ZD3yAz4f21aM/view)**
+**[ View GitHub Repository](https://github.com/gcckd01/Agro-Sync-main)** | **[Project brochure](https://drive.google.com/file/d/1q23UIfDBKe1v4r62iZ29ZD3yAz4f21aM/view)**
 
 ---
 
