@@ -20,6 +20,6 @@ Developed **AgroSync**, a major project designed for precision agriculture.The s
 **ML Recommendation Engine**: Implemented a recommendation system with **87% accuracy** for crop suggestions based on multi-parameter analysis of soil and weather conditions.
 **IoT & Hardware Integration**: Designed and integrated custom **ESP32-based sensors** to monitor real-time soil health parameters.
 **Full-Stack Development**: Built a cross-platform mobile application using **React Native** and a **Flask** backend for seamless sensor-to-app communication.
-**Cloud Infrastructure**: Utilized **Supabase** for real-time data storage and management, ensuring high availability for field-deployed sensors. [cite: 26]
+**Cloud Infrastructure**: Utilized **Supabase** for real-time data storage and management, ensuring high availability for field-deployed sensors.
 
 ---
